@@ -8,7 +8,7 @@ const AnimeList = () => {
     useEffect(() => {
         api
           .get("/animes")
-          .then((response) => setUser(response.data))
+          .then((response) => setAnime(response.data))
           .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
           });
