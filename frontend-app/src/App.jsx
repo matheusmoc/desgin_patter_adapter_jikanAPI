@@ -1,9 +1,9 @@
-import AnimeList from "./pages/AnimeList"
+import AnimeList from "./views/AnimeList"
 
 function App() {
 
   return (
-    <AnimeList />
+        <AnimeList />
   )
 }
 
