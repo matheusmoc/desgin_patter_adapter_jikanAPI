@@ -1,66 +1,74 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Padrão Adapter
+Este é o código de exemplo feito para mostra o que é e quando usar o padrão do adaptador com implementação em Laravel.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+### Setup
+ 1. Clonar o projeto `https://github.com/matheusmoc/design_pattern_adapter_jikanAPI.git`
+ 
+ 2. Rodar `composer install`
+ 
+ 2. Configurar o seu .env
+ 
+ - cp .env.example .env
+ - php artisan key:generate
+ 
+ 3. Executar o servidor `php artisan serve`
+ 
+ 5. Startar o servidor no frontend
+ 
+ - `cd frontend-app`
+ - `npm install` ou `yarn install` 
+ - `npm run dev`
+ 
+ 
+ 4. 
+ 
+ O projeto estará rodando no `http://localhost:3000`
+ 
+ Pode ser utilizado o postman para teste nas endpoints
+ 
+    - `http://localhost:8000/api/animes`
+    - `http://localhost:8000/api/animes-by-character?character=6` Filtra o anime pelo personagem.
+    - `http://localhost:8000/api/animes-by-id?id=1` Filtra o anime pelo id.
+  
+  <hr>
+  
+  ### API Utilizada para teste.
+  
+  https://jikan.moe/
+  
+  <hr>
+  
+  ## O que é um Design Pattern e como funciona um padrão de projeto adapter? 
+  
+  O padrão Adapter é muito utilizado quando precisamos encaixar uma nova biblioteca de classes, adquirida de um fornecedor, em um sistema de software já existente, porém essas bibliotecas de classes do novo fornecedor são diferentes das bibliotecas de classes do fornecedor antigo. 
+  
+  ## Mas como esse Design Pattern funcinaria caso quisessemos uma solução de problemas no mundo real com o framework Laravel? 
+  
+  Você pode adaptar um sistema totalmente divergente do seu e tratar seus dados de acordo com sua necessidade, padronizando tudo que precisa ser padronizado e com a finalidade de adaptar isso ao seu software. O Adapter é muito utilizado para compatibilizar o seu sistema a outros frameworks ou APIs. Abaixo podemos ver um ótimo exemplo:
+  
+  ### Exemplo de uma situação real:
+  <pre>
+  
+  Fui designado pelo CTO da empresa de fazer uma integração de software resgatando dados de um sistema atual em Laravel 9 e integrando a um sistema legado em Laravel.
+  
+  - Problema:
+  
+  O backend do sistema legado retorna endpoints em formato `XML`, no entanto eu teria que adaptar os dados em `JSON` do meu sistema em Laravel 9 para que retorne `XML`   e mantenha os padrões de negócio da empresa.
+  
+  - Solução:
+  
+  A ideia seria utilizar o padrão de projeto Adapter, onde posso criar uma classe chamada DataAdapter resgatando esses dados do sistema em Laravel 9 para o legado, e por fim tratar estes dados em um controlador utilizando um pacote de conversão de dados para `XML`
+  
+  <b>OBS:</b> Um pacote para isso poderia ser este formatador desenvolvida pela comunidade: https://github.com/SoapBox/laravel-formatter
+   
+ - Conclusão:
+ 
+Podemos concluir então, que nossa aplicação legada serve como um intermediador (podemos exemplificar o intermediador com um um simples adaptar USB que converte um cabo USB-C para qualquer outro tipo de entrada USB caso seja necessário utiliza-lo em um computador mais antigo), ou seja, recebe solicitações do cliente e converte essas solicitações em um formato que o fornecedor entenda.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ </pre>
+ 
+ A imagem abaixo representa a situação contrária descrita anteriormente, onde queremos consumir serviços de um sistema legado para um nova tecnologia.
+ 
+![image](https://user-images.githubusercontent.com/73448357/218322572-02c87b8e-d782-48d5-9e9e-ab3e79f7d4dd.png)
+ 
