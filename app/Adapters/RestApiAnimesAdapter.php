@@ -22,7 +22,7 @@ class RestApiAnimesAdapter implements AnimesService
 
     }
 
-    public function getAnimeById(string $id){
+    public function getAnimeById(int $id){
         $response = Http::get("{$this->api}/$id/full");
         return $response->json();
     }

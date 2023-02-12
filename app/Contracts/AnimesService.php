@@ -8,7 +8,6 @@ namespace App\Contracts;
 
 interface AnimesService{
     public function getAnimes();
-    public function getAnimeById(string $id);
+    public function getAnimeById(int $id);
     public function getAnimeByCharacter(string $character);
-
 }
