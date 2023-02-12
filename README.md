@@ -64,7 +64,7 @@ Este é o código de exemplo feito para mostrar o que é e quando usar o Design 
    
  - Conclusão:
  
-Podemos concluir então, que nossa aplicação legada serve como um intermediador (podemos exemplificar o intermediador com um um simples adaptar USB que converte um cabo USB-C para qualquer outro tipo de entrada USB caso seja necessário utiliza-lo em um computador mais antigo), ou seja, recebe solicitações do cliente e converte essas solicitações em um formato que o fornecedor entenda.
+Podemos concluir então, que nossa aplicação legada serve como um intermediador (podemos exemplificar o intermediador com um simples adaptador USB que converte um cabo USB-C para qualquer outro tipo de entrada USB, caso seja necessário utiliza-lo em um computador mais antigo), ou seja, recebe solicitações do cliente e converte essas solicitações em um formato que o fornecedor entenda.
 
  </pre>
  
