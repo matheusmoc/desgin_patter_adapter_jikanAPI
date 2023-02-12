@@ -34,4 +34,14 @@ class UserTest extends TestCase
         $response
             ->assertStatus(200);
     }
+
+    public function test_if_user_login_with_all_data_requested(){
+        $response = $this->postJson('/api/login', [
+            'email' => 'test@gmail.com',
+            'password' => 'testest@123', // password
+        ]);
+
+        $response
+            ->assertStatus(200);
+    }
 }
