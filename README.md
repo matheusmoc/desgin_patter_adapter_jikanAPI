@@ -39,11 +39,11 @@ Este é o código de exemplo feito para mostrar o que é e quando usar o padrão
   
   <hr>
   
-  ## O que é um Design Pattern e como funciona um padrão de projeto adapter? 
+  ## Como funciona um padrão de projeto adapter? 
   
   O padrão Adapter é muito utilizado quando precisamos encaixar uma nova biblioteca de classes, adquirida de um fornecedor, em um sistema de software já existente, porém essas bibliotecas de classes do novo fornecedor são diferentes das bibliotecas de classes do fornecedor antigo. 
   
-  ## Mas como esse Design Pattern funcinaria caso quisessemos uma solução de problemas no mundo real com o framework Laravel? 
+  ## Mas como esse Design Pattern funcionaria caso quisessemos uma solução de problemas no mundo real com o framework Laravel? 
   
   Você pode adaptar um sistema totalmente divergente do seu e tratar seus dados de acordo com sua necessidade, padronizando tudo que precisa ser padronizado e com a finalidade de adaptar isso ao seu software. O Adapter é muito utilizado para compatibilizar o seu sistema a outros frameworks ou APIs. Abaixo podemos ver um ótimo exemplo:
   
