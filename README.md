@@ -7,7 +7,7 @@ Este é o código de exemplo feito para mostrar o que é e quando usar o Design 
  
  2. Rodar `composer install`
  
- 2. Configurar o seu .env
+ 2. Configurar a sua .env
  
  - cp .env.example .env
  - php artisan key:generate
