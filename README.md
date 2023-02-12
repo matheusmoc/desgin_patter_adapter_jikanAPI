@@ -1,5 +1,5 @@
 ## Padrão Adapter
-Este é o código de exemplo feito para mostra o que é e quando usar o padrão do adaptador com implementação em Laravel.
+Este é o código de exemplo feito para mostrar o que é e quando usar o padrão do adaptador com implementação em Laravel.
 
 
 ### Setup
