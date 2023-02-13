@@ -58,13 +58,13 @@ Este é o código de exemplo feito para mostrar o que é e quando usar o Design 
   
   - Solução:
   
-  A ideia seria utilizar o padrão de projeto Adapter, onde posso criar uma classe chamada DataAdapter resgatando esses dados do sistema em Laravel 9 para o legado, e por fim tratar estes dados em um controlador utilizando um pacote de conversão de dados para `XML`
+  A ideia seria utilizar o padrão de projeto Adapter, onde posso criar uma classe chamada DataAdapter resgatando estes dados do sistema em Laravel 9 para o legado, e por fim tratar estes dados em um controlador utilizando um pacote de conversão de dados para `XML`
   
   <b>OBS:</b> Um pacote para isso poderia ser este formatador desenvolvida pela comunidade: https://github.com/SoapBox/laravel-formatter
    
  - Conclusão:
  
-Podemos concluir então, que nossa aplicação legada serve como um intermediador (podemos exemplificar o intermediador com um simples adaptador USB que converte um cabo USB-C para qualquer outro tipo de entrada USB, caso seja necessário utiliza-lo em um computador mais antigo), ou seja, recebe solicitações do cliente e converte essas solicitações em um formato que o fornecedor entenda.
+Podemos concluir então, que nossa aplicação legada serve como um intermediador (podemos exemplificar o intermediador com um simples adaptador USB que converte um cabo USB-C para qualquer outro tipo de entrada USB caso seja necessário utiliza-lo em um computador mais antigo), ou seja, recebe solicitações do cliente e converte essas solicitações em um formato que o fornecedor entenda.
 
  </pre>
  
