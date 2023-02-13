@@ -54,7 +54,7 @@ Este é o código de exemplo feito para mostrar o que é e quando usar o Design 
   
   - Problema:
   
-  O backend do sistema legado retorna endpoints em formato `XML`, no entanto eu teria que adaptar os dados em `JSON` do meu sistema em Laravel 9 para que retorne `XML`   e mantenha os padrões de negócio da empresa.
+  O backend do sistema legado retorna endpoints em formato `XML`, no entanto eu teria que adaptar os dados em `JSON` do meu sistema em Laravel 9 para que retorne `XML` para manter os padrões de negócio da empresa.
   
   - Solução:
   
